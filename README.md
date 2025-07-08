@@ -93,6 +93,73 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **What steps are required to open an X11 window and receive events?**
+
+1.) Install Libx11-dev. The command is:
+
+   ```
+    sudo apt-get install libx11-dev
+
+   ```
+2.) Include the Xlib header: 
+
+   ```c
+    #include <X11/Xlib.h>
+   ```
+
+3.) Open an connection to the X server
+   ```c
+   int main(void) {
+    Display *dpy = XOpenDisplay(NULL);
+    if (!dpy) {
+        fprintf(stderr, "Cannot open display\n");
+        return EXIT_FAILURE;
+    ```  
+4.) specify the attributes of the window. 
+
+   ```c
+    int screen = DefaultScreen(dpy);
+    Window win = XCreateSimpleWindow(
+        dpy, RootWindow(dpy, screen),
+        10, 10, 400, 300, 1,
+        BlackPixel(dpy, screen),
+        WhitePixel(dpy, screen)
+   ```
+5.) Specify the types of events that the x server need to handle. In this case it is a simple window.
+
+   ```c
+    XSelectInput(dpy, win, ExposureMask | KeyPressMask);
+    ```
+    ExposureMask: When part of the window becomes visible again, the window will be redrawn
+    KeyPressMask: If a key of the keyboard is pressed while the window is in the forground, the program reacts to the keypress.
+
+6.) Create a loop of events. In this case the variable e holds the information about the event and XNextEvent waits for a free event from       the X server to open a Display and send the data to the e variable. When the display and the event is exposed the server should draw        the event.
+
+    If a key of the keyboard is pressed while the window is in the forground, the program reacts to the keypress. In this case the              execution closes.
+
+      ```c
+        for(;;) {
+        XEvent e;
+        XNextEvent(dpy, &e);
+        if (e.type == Expose) {
+            // Draw a rectangle
+            XDrawRectangle(dpy, win, gc, 50, 50, 200, 100);
+        }
+        if (e.type == KeyPress)
+            break;
+    }
+      ```c
+7.) Clean up the Program
+
+    XFreeGC(dpy, gc);
+    XDestroyWindow(dpy, win);
+    XCloseDisplay(dpy);
+    return EXIT_SUCCESS;
+    
+8.) Compile and run 
+
+    gcc -o solutions/x11_draw solutions/x11_draw.c -lX11
+    ./solutions/x11_draw
+    
 2. **How does the `Expose` event trigger your drawing code?**
 
 ---
