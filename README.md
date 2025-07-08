@@ -126,10 +126,9 @@ In this exercise you will:
    ```
 5.) Specify the types of events that the x server need to handle. In this case it is a simple window.
 
-   ```c
+```c
     XSelectInput(dpy, win, ExposureMask | KeyPressMask);
-
-    ```
+ ```
     ExposureMask: When part of the window becomes visible again, the window will be redrawn
     KeyPressMask: If a key of the keyboard is pressed while the window is in the forground, the program reacts to the keypress.
 
