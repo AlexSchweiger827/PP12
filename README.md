@@ -164,6 +164,7 @@ In this exercise you will:
     
 2. **How does the `Expose` event trigger your drawing code?**
 
+   The `Expose` event signals the x server to redraw the part or parts of the window that are visible. If for example a other window           covers it, the part of the programmed window is not visible. After the other window is removed, the programmed window needs to be           redrawn. The `Expose` event is triggered when the window should be drawn for the first time, an other window covers it or the scaling of    the window changed.  
 ---
 
 ### Task 2: GTK+ 3 Application & Extension
