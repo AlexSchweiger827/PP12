@@ -128,6 +128,7 @@ In this exercise you will:
 
    ```c
     XSelectInput(dpy, win, ExposureMask | KeyPressMask);
+
     ```
     ExposureMask: When part of the window becomes visible again, the window will be redrawn
     KeyPressMask: If a key of the keyboard is pressed while the window is in the forground, the program reacts to the keypress.
@@ -147,14 +148,16 @@ In this exercise you will:
         if (e.type == KeyPress)
             break;
     }
-      ```c
+      ```
 7.) Clean up the Program
 
+    ```c
     XFreeGC(dpy, gc);
     XDestroyWindow(dpy, win);
     XCloseDisplay(dpy);
     return EXIT_SUCCESS;
-    
+    ```
+
 8.) Compile and run 
 
     gcc -o solutions/x11_draw solutions/x11_draw.c -lX11
