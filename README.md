@@ -223,7 +223,26 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **How does GTK’s signal-and-callback mechanism differ from X11’s event loop?**
+
+**GTK signal and callback**
+
+GTK is a GUI toolkit which uses widgets which reacts to certan excutions of the user (e.g. GTKButton: A button is clicked and the text in the entry changes).
+
+A signal is created thorugh a widget (e.g a button). When the button is clicked.
+GTK+ handles the event and translates it into a widget signal.
+
+**X11 event loop**
+X11 uses Xlib which is a C library that allows a communication with the X server.
+The x server creates events (e.g ButtonPress) and sends them to client applications.
+The events need detailed information (keycodes, mouse coordinates) and a detailed description which events the x server should send to the clients application. 
+
+GTK looks on the state of the widgets, while X11 looks on the event (click of the mousbutton or using a Key on the keyboard).
+
 2. **Why use `pkg-config` when compiling GTK applications?**
+
+With `pkg-config` you get the right compilation flags and linking flags.
+The compiler knows the right include flags , library paths, library names and Preprocessed definitions.
+It would take a lot of time to compile the GTK applications manually and the risk of errors are higher than using `pkg-config`.
 
 ---
 
