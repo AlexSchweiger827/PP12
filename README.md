@@ -92,7 +92,7 @@ In this exercise you will:
 ```
 **Link of x11_draw.c**
 
-[x11_draw.c] ()
+[x11_draw.c](https://github.com/AlexSchweiger827/PP12/blob/master/PP12/solutions/x11_draw.c)
 
 **x11_draw.c compiled and test run of x11_draw**
 
@@ -229,7 +229,7 @@ In this exercise you will:
 
 **Link of gtk_app.c**
 
-[gtk_app.c]()
+[gtk_app.c](https://github.com/AlexSchweiger827/PP12/blob/master/PP12/solutions/gtk_app.c)
 
 **gtk_app.c compiled and testrun of gtk_app**
 
