@@ -233,9 +233,9 @@ In this exercise you will:
 
 **gtk_app.c compiled and testrun of gtk_app**
 
-[gtk_app.c compiled](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_1.PNG?raw=true)
+![gtk_app.c compiled](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_1.PNG?raw=true)
 
-[gtk_app](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_2.PNG?raw=true)
+![gtk_app](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_2.PNG?raw=true)
 
 
 
