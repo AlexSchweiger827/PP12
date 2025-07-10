@@ -270,3 +270,5 @@ It would take a lot of time to compile the GTK applications manually and the ris
 ---
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
+
+I did Task 1 and Task 2. I did not The subtask 4 in task 2. It took me 91 minutes. 
