@@ -88,7 +88,17 @@ In this exercise you will:
    ```bash
    gcc -o solutions/x11_draw solutions/x11_draw.c -lX11
    ./solutions/x11_draw
-   ```
+ ```
+```
+**Link of x11_draw.c**
+
+[x11_draw.c] ()
+
+**x11_draw.c compiled and test run of x11_draw**
+
+![x11_draw.c compiled](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%201_1.PNG?raw=true)
+
+![x11_draw](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%201_2.PNG?raw=true)
 
 #### Reflection Questions
 
@@ -216,6 +226,19 @@ In this exercise you will:
    gcc -o solutions/gtk_app solutions/gtk_app.c $(pkg-config --cflags --libs gtk+-3.0)
    ./solutions/gtk_app
    ```
+
+**Link of gtk_app.c**
+
+[gtk_app.c]()
+
+**gtk_app.c compiled and testrun of gtk_app**
+
+[gtk_app.c compiled](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_1.PNG?raw=true)
+
+[gtk_app](https://github.com/AlexSchweiger827/PP12/blob/master/PP12%20screenshots/Task%202_2.PNG?raw=true)
+
+
+
 4. **Extension Feature:** Modify the program to add a **text entry** (`GtkEntry`) above the button, and on button click update the label to show the entry’s current text instead of the fixed string.
 
    * Hint: use `gtk_entry_get_text()`.
